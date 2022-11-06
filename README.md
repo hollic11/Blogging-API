@@ -1,5 +1,5 @@
 # Blog App
-This is a bloggin API
+This is a blogging API
 
 ---
 
