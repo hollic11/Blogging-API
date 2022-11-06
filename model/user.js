@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt')
 const Schema = mongoose.Schema
 const ObjectId = Schema.ObjectId
 
-const UserSchema = new mongoose.Schema({
+const UserModel = new mongoose.Schema({
     first_name:{
         type: String,
          required: true,
@@ -33,7 +33,7 @@ const UserSchema = new mongoose.Schema({
         enum: ['user', 'admin'], 
         default: 'user' 
     },
-timestamps: true
+
 });
 
 UserModel.pre(
@@ -53,4 +53,4 @@ UserModel.methods.isValidPassword = async function(password) {
     return compare;
   }
   
-module.exports = mongoose.model("User", UserSchema);
+module.exports = mongoose.model("User", UserModel);
