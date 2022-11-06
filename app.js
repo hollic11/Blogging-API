@@ -4,7 +4,7 @@ require("./Authentication/auth")
 const blogRouter = require('./route/blogRoute')
 const authRouter = require('./route/auth')
 const bodyParser =require('body-parser')
-PORT = process.env.PORT  || 5000
+PORT = process.env.PORT  || 3000
 const app = express()
 
 const {connectToMongoDB} = require('./db')
